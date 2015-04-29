@@ -3,7 +3,7 @@
 % finalexamz - Шалгалтын материалын эх бэлтгэхэд ашиглагдах 
 % finalexamz - LaTeX системд суурилсан багаж ба загвар
 %
-% Хувилбар 1.0.0
+% Хувилбар 1.1.0
 %
 % Хөгжүүлсэн Галаа (www.galaa.mn)
 % Copyright (c) 2015 Galaa
@@ -68,7 +68,7 @@
 % Үүнээс дооших скриптийг өөрчлөх шаардлагагүй
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\SetBgContents{\textcolor{black}{\copyright\,2015\,Галаа (www.galaa.mn).\,\LaTeX\,ашиглав.}}
+\SetBgContents{\textcolor{black}{FinalExamZ\ \copyright\ 2015\ Галаа\ (www.galaa.mn).\ \LaTeX\ ашиглав.}}
 \SetBgPosition{17.5cm,-20cm}
 \SetBgOpacity{1.0}
 \SetBgAngle{90.0}
@@ -151,14 +151,16 @@ $$
   \coverpage
   \setcounter{totalpoint}{0}
   \newpage
-  \paragraph{Анхаарамж} \hfill {\small Амжилт хүсье!}
-  \begin{itemize}
-   \setlength{\itemsep}{0mm}
-   \item Шалгалтын нийт хугацаа: \totaltime
-   \item Зөвшөөрөгдсөн материал: \materials
-   \ifthenelse{\equal{\caution}{}}{}{\item \caution}
-  \end{itemize}
-  \vspace{-0.5em} \textcolor{black!50}{\hrulefill}
+  \ifthenelse{\equal{\printsolution}{yes}}{}{
+   \paragraph{Анхаарамж} \hfill {\small Амжилт хүсье!}
+   \begin{itemize}
+    \setlength{\itemsep}{0mm}
+    \item Шалгалтын нийт хугацаа: \totaltime
+    \item Зөвшөөрөгдсөн материал: \materials
+    \ifthenelse{\equal{\caution}{}}{}{\item \caution}
+   \end{itemize}
+   \vspace{-0.5em} \textcolor{black!50}{\hrulefill}
+  }
   \input{Variant_#1.tex}
   \paragraph{} \hfill нийт оноо \arabic{totalpoint}
   \begin{center}

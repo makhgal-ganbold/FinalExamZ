@@ -2,7 +2,7 @@
 % 
 % finalexamz - LaTeX Template & Tool for Exam Preparation
 %
-% Version 1.0.0
+% Version 1.1.0
 %
 % Developed by Galaa (www.galaa.mn)
 % Copyright (c) 2015 Galaa
@@ -33,7 +33,7 @@
 
 \DeclareMathOperator{\cov}{cov}
 
-\SetBgContents{\textcolor{black}{\copyright\,2015\,Galaa (www.galaa.mn).\,Powered by \LaTeX.}}
+\SetBgContents{\textcolor{black}{FinalExamZ\ \copyright\ 2015\ Galaa\ (www.galaa.mn).\ Powered by\ \LaTeX.}}
 \SetBgPosition{17.5cm,-20cm}
 \SetBgOpacity{1.0}
 \SetBgAngle{90.0}
@@ -116,14 +116,16 @@ $$
   \coverpage
   \setcounter{totalpoint}{0}
   \newpage
-  \paragraph{Attention} \hfill {\small Good Luck!}
-  \begin{itemize}
-   \setlength{\itemsep}{0mm}
-   \item Exam Duration: \totaltime
-   \item Permitted Materials: \materials
-   \ifthenelse{\equal{\caution}{}}{}{\item \caution}
-  \end{itemize}
-  \vspace{-0.5em} \textcolor{black!50}{\hrulefill}
+  \ifthenelse{\equal{\printsolution}{yes}}{}{
+   \paragraph{Attention} \hfill {\small Good Luck!}
+   \begin{itemize}
+    \setlength{\itemsep}{0mm}
+    \item Exam Duration: \totaltime
+    \item Permitted Materials: \materials
+    \ifthenelse{\equal{\caution}{}}{}{\item \caution}
+   \end{itemize}
+   \vspace{-0.5em} \textcolor{black!50}{\hrulefill}
+  }
   \input{Variant_#1.tex}
   \paragraph{} \hfill Total point \arabic{totalpoint}
   \begin{center}

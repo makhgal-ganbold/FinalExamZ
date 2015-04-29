@@ -2,7 +2,7 @@
 
 ***
 
-LaTeX Template & Tool for Exam Preparation - Version 1.0.0
+LaTeX Template & Tool for Exam Preparation - Version 1.1.0
 
 **Author** 
 
