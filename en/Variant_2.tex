@@ -1,7 +1,7 @@
 
 %\problem[height]{problem}{point}{solution}
 
-\problem[2.5]{
+\problem[2]{
 Joint distribution given by table.
 \begin{center}
 \begin{tabular}{r|rrr}
@@ -18,6 +18,22 @@ Are random variables correlated?
 5
 }{
 yes
+}
+
+\begin{lrbox}{\lstListing}
+\begin{lstlisting}[language=python]
+import random, math
+Lambda = float( raw_input("Lambda = ") )
+print -1.0 * math.log( random.random() ) / Lambda
+\end{lstlisting}
+\end{lrbox}
+
+\problem[2]{
+Which probability distribution was simulated? \printlisting Prove actual formula was used here.
+}{
+5
+}{
+
 }
 
 %\question[height]{question}{point}{answer}

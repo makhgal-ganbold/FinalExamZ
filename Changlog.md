@@ -2,6 +2,16 @@
 
 ***
 
+**Version 1.2.0**
+
+March 13, 2016
+
+  - Emphasis at answer text for placement test.
+  - Underline at answer equation for placement text.
+  - Optional vertical space stabilization of environments solution and answer at the problem and question.
+  - Fields for student name and ID were added to page header.
+  - Listing was supported.
+
 **Version 1.1.0**
 
 April 30, 2015
