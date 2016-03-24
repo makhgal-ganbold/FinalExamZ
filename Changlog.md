@@ -4,6 +4,16 @@
 
 **Version 1.2.0**
 
+March 24, 2016
+
+  - Transformed to LaTeX class.
+  - Null value for some unnecessary parameters.
+  - A bug at optinal vertical psaces has been solved.
+  - A new environment for variants.
+  - New special commands for cover page and section attention.
+
+**Version 1.2.0**
+
 March 13, 2016
 
   - Emphasis at answer text for placement test.
@@ -16,7 +26,7 @@ March 13, 2016
 
 April 30, 2015
 
-  - Hide section "Attention", when "Print Solution Mode"
+  - Hides section "Attention", on "Print Solution Mode"
   - Package name has been added to Sidebar
   - Space between words in sidebar has been modified
 

@@ -3,7 +3,7 @@
 % finalexamz - Шалгалтын материалын эх бэлтгэхэд ашиглагдах 
 % finalexamz - LaTeX системд суурилсан багажийн баримтжуулалт
 %
-% Хувилбар 1.2.0
+% Хувилбар 1.3.0
 %
 % Хөгжүүлсэн Галаа (www.galaa.mn)
 % Copyright (c) 2015-2016 Galaa
@@ -34,7 +34,7 @@
   Хэрэглээний Математикийн тэнхим\\[2mm]
   \texttt{makhgal@seas.num.edu.mn} \\[2mm]
   \www}
-\newcommand{\version}{v1.2.0}
+\newcommand{\version}{v1.3.0}
 \newcommand{\www}{\url{http://www.galaa.mn/}}
 \newcommand{\svn}{\url{https://github.com/galaamn/FinalExamZ}}
 \date{2015 оны 4-р сарын 28}
@@ -51,17 +51,18 @@ FinalExamZ бол \LaTeX\, систем дээрх шалгалтын матер
 
 \paragraph{Лиценз} FinalExamZ багаж ба загварыг хуулбарлах, түгээх, өөрчлөх нь LATEX Project Public License (LPPL) (\url{http://www.latex-project.org/lppl.txt}) лицензийн 1.3 ба түүнээс хойших хувилбар дахь нөхцлөөр зохицуулагдана.
 
-\paragraph{Ашиглагдсан сангууд} FinalExamZ-ийг зохиоход amsmath, amssymb, fmtcount, graphicx, xcolor, fancyhdr, multido, ifthen, background, xstring, tikz, listings багцууд болон ulem сангийн normalem дэд хэсэг ашиглагдсан. Мөн монгол хэлний дэмжлэгийн үүднээс inputenc ба babel сангууд дуудагдана.
+\paragraph{Ашиглагдсан сангууд} FinalExamZ-ийг зохиоход amsmath, amssymb, textcomp, fmtcount, graphicx, xcolor, fancyhdr, multido, ifthen, background, xstring, tikz, listings багцууд болон ulem сангийн normalem дэд хэсэг ашиглагдсан. Мөн монгол хэлний дэмжлэгийн үүднээс inputenc ба babel сангууд дуудагдана.
 
 \section{Бүтэц}
 
 Энэхүү багц нь дараах нэр бүхий файлуудаас бүтнэ.
 \begin{enumerate}
- \item FinalExamZ.tex
- \item FinalExamZ.pdf
- \item Variant\_1.tex
- \item Variant\_2.tex
- \item documentation.pdf
+ \item Exam.pdf (үр дүн)
+ \item Exam.tex (толгой файл)
+ \item finalexamz.cls (\LaTeX\ class)
+ \item Variant\_1.tex (шалгалтын бодлогууд)
+ \item Variant\_2.tex (шалгалтын бодлогууд)
+ \item documentation.pdf (баримтжуулалт)
 \end{enumerate}
 
 \section{Хувилбарууд дахь өөрчлөлтийн бүртгэл}
@@ -90,35 +91,73 @@ FinalExamZ бол \LaTeX\, систем дээрх шалгалтын матер
  \item Програмын эх кодыг оруулах явдал хялбарчлагдсан.
 \end{enumerate}
 
+\subsection{2016 оны 3 сарын 24, хувилбар 1.3.0}
+
+\begin{enumerate}
+ \item Класс хэлбэрт шилжив.
+ \item Зарим чухал бус талбарын утгыг хоосноор зааж өгөх боломжийг бүрдүүлэв.
+ \item Бодолт ба хариултын хэсгийн өндрийг заах явдал дахь алдааг засав.
+ \item Вариантуудыг оруулах байдлыг өөрчилж environment уруу шилжүүлэв.
+ \item Нүүр хуудас ба анхааруулгыг хэвлэх эсэхийг тусгай командаар удирдах боломжийг оруулав.
+\end{enumerate}
+
 \section{Суулгах ба ашиглах}
 
-FinalExamZ нь загвар ба багажийн шийдлийг хамтад нь агуулсан учраас \texttt{FinalExamZ.tex} файл нь \LaTeX-ийн толгой файл болон шууд ашиглагдана. Мөн \texttt{Variant\_1.tex} файл заавал, шаардлагатай тохиолдолд \texttt{Variant\_2.tex} мэтчилэн нэмэлт файлуудыг зохих форматын дагуу үүсгэж \texttt{FinalExamZ.tex} файлын хамтаар нэг хавтсанд байрлуулсан байна.
+FinalExamZ классыг агуулж буй \texttt{finalexamz.cls} файлыг баримтын толгой файл байрлаж буй хавтсанд хуулах бөгөөд улмаар \verb|\documentclass{finalexamz}| маягаар баримтын классыг зааж өгнө.
 
 \section{Тохиргоо}
 
-\subsection{Ерөнхий тохиргоо}
+\subsection{Монгол хэлний дэмжлэг}
 
-Ерөнхий тохиргоо нь \texttt{FinalExamZ.tex} файлын эхэн хэсэгт дараах маягтайгаар байрлана.
+Классыг \texttt{mongolian} параметртэйгээр дуудна. Тодруулбал,
 \begin{verbatim}
-\newcommand{\institution}{Сургуулийн нэр}
-\newcommand{\logo}{эмблем лого}
-\newcommand{\examtype}{Шалгалтын төрөл}
-\newcommand{\examdate}{Шалгалтын огноо}
-\newcommand{\coursetitle}{Хичээлийн нэр}
-\newcommand{\coursecode}{Хичээлийн индекс}
-\newcommand{\teacher}{Багшийн нэр}
-\newcommand{\totaltime}{Шалгалтын хугацаа}
-\newcommand{\materials}{Ашиглаж болох материалууд}
-\newcommand{\caution}{Өөр бусад анхааруулга, санамж, зөвлөмж}
-\newcommand{\examvariants}{вариантын тоо}
-\newcommand{\printsolution}{хариуг хэвлэх эсэх}
+\documentclass[mongolian]{finalexamz}
+\end{verbatim}
+Үүний дүнд монгол хэлний \texttt{babel} багцыг дуудахаас гадна загвар дахь хэлний хувьсагчдын утгыг монголоор оноох болно.
+
+\subsection{Классын тохиргоо}
+
+Уг класс нь
+\begin{enumerate}
+ \item хариуг хэвлэх
+ \item үсгийн хэмжээг өөрчлөх
+ \item ноорог байдлаар боловсруулах
+\end{enumerate}
+зэргийг заах тусгай параметрүүдтэй. Олон параметрийг зэрэг өгөх тохиолдолд параметрүүдийг таслалаар тусгаарлана.
+
+\subsection{Хариуг хэвлэх}
+
+Классыг \texttt{solution} параметртэйгээр дуудна. \\ Тодруулбал, \verb|\documentclass[solution]{finalexamz}|
+
+\subsection{Үсгийн хэмжээг өөрчлөх}
+
+Үсгийн хэмжээ pt хэмжээгээр 10, 11 ба 12 гэх гурван сонголттой. Жишээлбэл үсгийн өндрийг 11pt хэмжээтэйгээр заахдаа классыг \verb|\documentclass[11pt]{finalexamz}| гэж дуудна.
+
+\subsection{Хариуг хэвлэх}
+
+Баримтыг ноорог буюу draft хэлбэрээр боловсруулахын тулд \texttt{draft} параметрийг нэмж өгнө. Тодруулбал, \verb|\texttt{\documentclass[draft]{finalexamz}|
+
+\subsection{Ерөнхий мэдээлэл}
+
+Ерөнхий тохиргоо нь баримтын толгой файлын эхэн хэсэгт дараах маягтайгаар байрлана.
+\begin{verbatim}
+\def\institution{Сургуулийн нэр}
+\def\logo{эмблем лого}
+\def\examtype{Шалгалтын төрөл}
+\def\examdate{Шалгалтын огноо}
+\def\coursetitle{Хичээлийн нэр}
+\def\coursecode{Хичээлийн индекс}
+\def\teacher{Багшийн нэр}
+\def\totaltime{Шалгалтын хугацаа}
+\def\materials{Ашиглаж болох материалууд}
+\def\caution{Нэмэлт анхааруулга, санамж, зөвлөмж}
 \end{verbatim}
 
 \subsubsection{\texttt{institution} параметр}
 
 Уг параметр нь шалгалт авч буй сургуулийн нэрийг заахад ашиглагдана. Параметрийн утгыг жишээлбэл 
 \begin{verbatim}
-\newcommand{\institution}{МОНГОЛ УЛСЫН ИХ СУРГУУЛЬ}
+\def\institution{МОНГОЛ УЛСЫН ИХ СУРГУУЛЬ}
 \end{verbatim}
 байдлаар зааж өгнө.
 
@@ -126,11 +165,11 @@ FinalExamZ нь загвар ба багажийн шийдлийг хамтад
 
 Үүнийг байгууллагын эмблем, логог шалгалтын материалын нүүрэнд  байрлуулахад ашиглана. Параметрийн утгыг 
 \begin{verbatim}
-\newcommand{\logo}{файлын нэр}
+\def\logo{файлын нэр}
 \end{verbatim}
 байдлаар зааж өгнө. Файл нь PNG, JPG, GIF зэрэг нийтлэг форматуудын алинаар ч байж болно. Хэрвээ лого байршуулахгүй бол параметрийн утгыг 
 \begin{verbatim}
-\newcommand{\logo}{}
+\def\logo{}
 \end{verbatim}
 гэж хоосноор үлдээнэ.
 
@@ -138,7 +177,7 @@ FinalExamZ нь загвар ба багажийн шийдлийг хамтад
 
 Шалгалтын төрлийг заахад ашиглагдана. Жишээлбэл Улирлын шалгалт, Явцын шалгалт гэх мэт. Параметрийг тохируулах байдал 
 \begin{verbatim}
-\newcommand{\examtype}{Явцын шалгалт}
+\def\examtype{Явцын шалгалт}
 \end{verbatim}
 маягтай байна.
 
@@ -146,7 +185,7 @@ FinalExamZ нь загвар ба багажийн шийдлийг хамтад
 
 Шалгалтын огноог шалгалтын материалын нүүр хуудсанд хэвлэхэд ашиглагдана. Жишээбэл 
 \begin{verbatim}
-\newcommand{\examdate}{2015 оны 6 сарын 10}
+\def\examdate{2015 оны 6 сарын 10}
 \end{verbatim}
 маягаар огноог дурын байдлаар өгөх боломжтой.
 
@@ -154,44 +193,45 @@ FinalExamZ нь загвар ба багажийн шийдлийг хамтад
 
 Хичээлийн нэрийг үүгээр заана. Жишээбэл 
 \begin{verbatim}
-\newcommand{\coursetitle}{Магадлалын онол}
+\def\coursetitle{Магадлалын онол}
 \end{verbatim}
 
 \subsubsection{\texttt{coursecode} параметр}
 
 Энэ параметрээр тухайн хичээлийн кодыг заана. Жишээбэл
 \begin{verbatim}
-\newcommand{\coursecode}{PROS211}
+\def\coursecode{PROS211}
 \end{verbatim}
+Мөн уг параметрийг хоосноор заах боломжтой. Энэ тохиолдолд хичээлийн кодтой холбогдох зүйлсийг хэвлэх явдлыг алгасах болно.
 
 \subsubsection{\texttt{teacher} параметр}
 
 Хичээл заасан багшийн нэр, шалгалт авч буй хүний нэрийг энд өгнө. Жишээбэл
 \begin{verbatim}
-\verb|\newcommand{\teacher}{Г.Махгал, Ш.Мөнгөнсүх}|
+\def\teacher{Г.Махгал, Ш.Мөнгөнсүх}
 \end{verbatim}
 
 \subsubsection{\texttt{totaltime} параметр}
 
 Шалгалтын хугацааг энд өгнө. Хугацааг дурын байдлаар заах боломжтой. Жишээбэл
 \begin{verbatim}
-\newcommand{\totaltime}{2 цаг}
+\def\totaltime{2 цаг}
 \end{verbatim}
 эсвэл
 \begin{verbatim}
-\newcommand{\totaltime}{120 минут}
+\def\totaltime{120 минут}
 \end{verbatim}
 гэх мэт.
 
 \subsubsection{\texttt{materials} параметр}
 
-Шалгалтын үеэр ашиглаж болох материалуудыг заахад ашиглагдана. Жишээбэл \begin{verbatim}
-\newcommand{\materials}{Тооны машин, тархалтын хүснэгтүүд, 
-томъёоны хураамж}
+Шалгалтын үеэр ашиглаж болох материалуудыг заахад ашиглагдана. Жишээбэл
+\begin{verbatim}
+\def\materials{Тооны машин, тархалтын хүснэгтүүд, томъёоны хураамж}
 \end{verbatim}
 эсвэл
 \begin{verbatim}
-\newcommand{\materials}{байхгүй}
+\def\materials{}
 \end{verbatim}
 гэх мэт.
 
@@ -199,26 +239,10 @@ FinalExamZ нь загвар ба багажийн шийдлийг хамтад
 
 Анхааруулга, санамж зэргийг энэ параметрээр дамжуулан оруулна. Жишээбэл 
 \begin{verbatim}
-\newcommand{\caution}{Гар утас, талблет, компьютер ашиглах, хуулах, 
+\def\caution{Гар утас, талблет, компьютер ашиглах, хуулах, 
 бусдад саад учруулах аливаа үйлдлийг хориглоно.}
 \end{verbatim}
 Хэрвээ шаардлагагүй бол хоосон үлдээж болно. Ийм тохиолдолд автоматаар уг талбарыг алгасах болно.
-
-\subsubsection{\texttt{examvariants} параметр}
-
-Шалгалтын вариантын тоог энд зааж өгнө. Жишээбэл 
-\begin{verbatim}
-\newcommand{\examvariants}{4}
-\end{verbatim}
-Шалгалтын вариантууд нь \texttt{Variant\_1.tex},\ldots,\texttt{Variant\_4.tex} гэх мэтээр нэрлэгдсэн файлуудад байршихыг анхаарна уу. Өөрөөр хэлбэл файлын тоо ба параметрийн утга зөрж болохгүй гэсэн үг юм. Мөн FinalExamZ нь эдгээр файлуудыг автоматаар дуудаж уншихаар програмчлагдсан.
-
-\subsubsection{\texttt{printsolution} параметр}
-
-Бодолт, хариу, түлхүүрийг материал дээр хэвлэх эсэхийг заана. Уг параметр нь \texttt{yes} ба \texttt{no} утгуудын аль нэгийг авна. Жишээбэл 
-\begin{verbatim}
-\newcommand{\printsolution}{yes}
-\end{verbatim}
-Бодолт ба хариуг хэрхэн зааж өгөхийг \ref{tools} хэсгээс үзнэ үү.
 
 \subsection{Бусад тохиргоо}
 
@@ -228,9 +252,17 @@ FinalExamZ нь загвар ба багажийн шийдлийг хамтад
 
 FinalExamZ нь үндсэн нэг загвартай бөгөөд загвар дизайныг өөрчлөх, хуулбарлах нөхцлийн талаар \ref{license} хэсэг бичсэн болно. Загварыг зохиохдоо гадаадын зарим их сургуулийн шалгалтын материалын загварыг харгалзан үзсэн.
 
-\par Цаасны хэмжээ A4, маржин (дээрээс, баруунаас, дороос, зүүнээс) 2.5 см, 2 см, 2.5 см, 3 см, үсгийн өндөр 10pt нэгжээр авагдсан. Тохиргоонд ашиглагдах уртын хэмжээсийн нэгжийг сантиметрээр авсан.
+\par Цаасны хэмжээ A4, маржин (дээрээс, баруунаас, дороос, зүүнээс) 2.5 см, 2 см, 2.5 см, 3 см, үсгийн өндөр 10pt, 11pt ба 12pt нэгжээр авагдсан. Үсгийн өндрийг классын параметрээр дамжуулан удирдах боломжтой. Тохиргоонд ашиглагдах уртын хэмжээсийн нэгжийг сантиметрээр авсан.
 
 \par Шалгалтын материалыг бүх вариантаар нэг бүхэл файл болгон гаргах бөгөөд ингэхдээ хуудасны дугаарыг нийт хуудасны (тухайн вариантын хувьд) хамтаар тооцон хуудас бүрийн хөл хэсэгт хэвлэхээр програмчилж өгсөн.
+
+\subsection{Нүүр хуудас}
+
+Нүүр хуудсыг баримтандаа оруулахын тулд \verb|\coverpage| командыг өгнө.
+
+\subsection{Анхааруулга хэсэг}
+
+Вариантын эхэнд байх анхааруулгыг \verb|\attention| командаар дуудна.
 
 \section{Багаж}\label{tools}
 
@@ -401,7 +433,7 @@ $EX=2$ ба $EY=1$ байв. Тэгвэл $E(2X+Y)=\ehide{2EX}+EY$.
 Эцэст нь \verb|\thide{}| функц олон мөр дамнасан текстийг нууж чаддаг болохыг тэмдэглэе.
 
 \begin{center}
- $\ast\ast\ast$ Төгсгөл $\ast\ast\ast$
+ $\ast\ast\ast$ Төгсгөл -- \today\ $\ast\ast\ast$
 \end{center}
 
 \end{document}
