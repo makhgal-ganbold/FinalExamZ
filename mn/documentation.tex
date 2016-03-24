@@ -34,24 +34,28 @@
   Хэрэглээний Математикийн тэнхим\\[2mm]
   \texttt{makhgal@seas.num.edu.mn} \\[2mm]
   \www}
-\newcommand{\version}{v1.3.0}
+\newcommand{\version}{v1.3.0 -- 2016/03/24}
 \newcommand{\www}{\url{http://www.galaa.mn/}}
 \newcommand{\svn}{\url{https://github.com/galaamn/FinalExamZ}}
 \date{2015 оны 4-р сарын 28}
 \maketitle
 
 \begin{abstract}
-FinalExamZ бол \LaTeX\, систем дээрх шалгалтын материалын загвар ба бодлого, асуулт, сонгох болон нөхөх тест бүхий олон варианттай шалгалтын материал бэлдэх багажийн цогц нийлэмж бөгөөд энгийн текст, математикийн томъёо, схем диаграм, зураг, хүснэгт ба програмын эх код зэргийг агуулсан шалгалтын материал бэлдэх ажлыг хөнгөвчилнө.\\[2mm]
+FinalExamZ бол шалгалтын материалын загвар ба бодлого, асуулт, сонгох болон нөхөх тест бүхий олон варианттай шалгалтын материал бэлдэх багажийн цогц нийлэмж -- \LaTeX\, класс бөгөөд энгийн текст, математикийн томъёо, схем диаграм, зураг, хүснэгт ба програмын эх код зэргийг агуулсан шалгалтын материал бэлдэхэд ашиглагдана.\\[2mm]
 \textbf{Түлхүүр үгс:} шалгалтын материал бэлдэх, шалгалтын материалын загвар, \LaTeX
 \end{abstract}
 
 \tableofcontents
 
-\section{Лиценз ба ашиглагдсан сангууд}\label{license}
+\section{Лиценз}\label{license}
 
-\paragraph{Лиценз} FinalExamZ багаж ба загварыг хуулбарлах, түгээх, өөрчлөх нь LATEX Project Public License (LPPL) (\url{http://www.latex-project.org/lppl.txt}) лицензийн 1.3 ба түүнээс хойших хувилбар дахь нөхцлөөр зохицуулагдана.
+FinalExamZ багаж ба загварыг хуулбарлах, түгээх, өөрчлөх нь LATEX Project Public License (LPPL) (\url{http://www.latex-project.org/lppl.txt}) лицензийн 1.3 ба түүнээс хойших хувилбар дахь нөхцлөөр зохицуулагдана.
 
-\paragraph{Ашиглагдсан сангууд} FinalExamZ-ийг зохиоход amsmath, amssymb, textcomp, fmtcount, graphicx, xcolor, fancyhdr, multido, ifthen, background, xstring, tikz, listings багцууд болон ulem сангийн normalem дэд хэсэг ашиглагдсан. Мөн монгол хэлний дэмжлэгийн үүднээс inputenc ба babel сангууд дуудагдана.
+\section{Ашиглагдсан сангууд}
+
+FinalExamZ нь \LaTeX-ийн стандарт класс болох \texttt{article} класст тулгуурласан.
+
+\par Уг классыг зохиоход amsmath, amssymb, textcomp, fmtcount, graphicx, xcolor, fancyhdr, multido, ifthen, background, xstring, tikz, listings багцууд болон ulem сангийн normalem дэд хэсэг ашиглагдсан. Мөн монгол хэлний дэмжлэгийн үүднээс inputenc ба babel сангууд дуудагдана.
 
 \section{Бүтэц}
 
@@ -101,7 +105,7 @@ FinalExamZ бол \LaTeX\, систем дээрх шалгалтын матер
  \item Нүүр хуудас ба анхааруулгыг хэвлэх эсэхийг тусгай командаар удирдах боломжийг оруулав.
 \end{enumerate}
 
-\section{Суулгах ба ашиглах}
+\section{Суулгах}
 
 FinalExamZ классыг агуулж буй \texttt{finalexamz.cls} файлыг баримтын толгой файл байрлаж буй хавтсанд хуулах бөгөөд улмаар \verb|\documentclass{finalexamz}| маягаар баримтын классыг зааж өгнө.
 
@@ -133,7 +137,7 @@ FinalExamZ классыг агуулж буй \texttt{finalexamz.cls} файлы
 
 Үсгийн хэмжээ pt хэмжээгээр 10, 11 ба 12 гэх гурван сонголттой. Жишээлбэл үсгийн өндрийг 11pt хэмжээтэйгээр заахдаа классыг \verb|\documentclass[11pt]{finalexamz}| гэж дуудна.
 
-\subsection{Хариуг хэвлэх}
+\subsection{Нооргийн горимд шилжүүлэх}
 
 Баримтыг ноорог буюу draft хэлбэрээр боловсруулахын тулд \texttt{draft} параметрийг нэмж өгнө. Тодруулбал, \verb|\texttt{\documentclass[draft]{finalexamz}|
 
