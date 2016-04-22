@@ -2,13 +2,13 @@
 
 ***
 
-**Version 1.2.0**
+**Version 1.3.0**
 
 March 24, 2016
 
   - Transformed to LaTeX class.
   - Null value for some unnecessary parameters.
-  - A bug at optinal vertical psaces has been solved.
+  - A bug at optinal vertical spaces has been solved.
   - A new environment for variants.
   - New special commands for cover page and section attention.
 
