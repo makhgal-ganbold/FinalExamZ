@@ -160,7 +160,7 @@
   \newcommand{\printsolution}{no}
 \fi
 
-\SetBgContents{\textcolor{black}{FinalExamZ\ \copyright\ 2015-2016\ \@developer\ (www.galaa.mn).\ \@poweredby}}
+\SetBgContents{\textcolor{black}{\tiny FinalExamZ\ \copyright\ 2015\ifthenelse{\equal{\the\year}{2015}}{}{--\the\year}\ \@developer\ (www.galaa.mn).\ \@poweredby}}
 \SetBgPosition{17.5cm,-20cm}
 \SetBgOpacity{1.0}
 \SetBgAngle{90.0}
