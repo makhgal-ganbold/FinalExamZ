@@ -347,6 +347,7 @@ $$
   \ifthenelse{\equal{\printsolution}{yes}}{
     \IfSubStr{#1}{[+]}{\textcircled{\Alph{testchoices}}}{\Alph{testchoices}.}
   }{\Alph{testchoices}.}
+  \nolinebreak\ \nolinebreak
   \StrSubstitute[0]{#1}{[+]}{}\qquad \addtocounter{testchoices}{1}
   \if\relax\detokenize{#2}\relax
     \expandafter\@firstoftwo

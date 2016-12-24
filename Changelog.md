@@ -2,6 +2,12 @@
 
 ***
 
+**Version 1.4.0**
+
+December 24, 2016
+
+  - No linebreak between the latin number and the text of the choice in selective tests.
+
 **Version 1.3.0**
 
 March 24, 2016
