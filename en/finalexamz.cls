@@ -2,7 +2,7 @@
 % 
 % finalexamz - LaTeX Template & Tool for Exam Preparation
 %
-% Version 1.3.0
+% Version 1.4.0
 %
 % Developed by Galaa (www.galaa.mn)
 % Copyright (c) 2015-2016 Galaa
@@ -11,7 +11,7 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\ProvidesClass{finalexamz}[2016/03/24 FinalExamZ -- LaTeX class for Exam Preparation - Version 1.3.0.alpha]
+\ProvidesClass{finalexamz}[2016/12/24 FinalExamZ -- LaTeX class for Exam Preparation - Version 1.4.0]
 \NeedsTeXFormat{LaTeX2e}
 
 %% Base class options
