@@ -39,8 +39,9 @@ while True :
 Source code on Python: \printlisting
 Another method for code input (see source code):
 \begin{lstlisting}[language=R]
-^^JX = 1:100
-^^Jmean(X)
+^^Jfor (i in 1:100) \{
+^^J  if (i \%\% 2 == 0) print(i)
+^^J\}
 \end{lstlisting}
 Listings package was used. Now \lstinline|mean(1:100)| inline code.
 }{

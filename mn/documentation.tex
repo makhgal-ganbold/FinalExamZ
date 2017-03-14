@@ -338,6 +338,14 @@ while True :
 ^^Jmean(X)
 \end{lstlisting}
 \end{verbatim}
+Энэ тохиолдолд \verb|{| ба \verb|}| бас \verb|%| зэрэг тэмдэгтүүдийг оруулахдаа тухайн тэмдэгтийн өмнө \verb|\| тэмдэгтийг залгаж бичнэ. Тодруулбал
+\begin{verbatim}
+\begin{lstlisting}[language=R]
+^^Jfor (i in 1:100) \{
+^^J  if (i \%\% 2 == 0) print(i)
+^^J\}
+\end{lstlisting}
+\end{verbatim}
 \end{enumerate}
 
 \paragraph{Код оруулахтай холбогдох нийтлэг зүйлс} Ашигласан програмчлалын хэлнийхээ нэрийг \texttt{language} параметрийн ард заана. Дэмжигдсэн хэлнүүдийн жагсаалтыг \url{https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings#Supported_languages} веб хуудаснаас үзэх боломжтой. Үүнээс гадна эх код дотор латинаас өөр үсэг тодруулбал кирилл үсэг орох боломжгүйг анхаарна уу. Харин түлхүүр үгс ба функцийн нэрсийг listings багцын keywords, morekeywords, otherkeywords, deletekeywords параметрүүдийн тусламжтайгаар зааж удирдах боломжтой.
