@@ -1,13 +1,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 
+%
 % finalexamz - LaTeX Template & Tool for Exam Preparation
 %
 % Version 1.4.0
 %
-% Developed by Galaa (www.galaa.mn)
-% Copyright (c) 2015-2016 Galaa
+% Developed by Galaa (www.galaa.net)
+% Copyright (c) 2015-2025 Galaa
 % License: LATEX Project Public License (LPPL) (http://www.latex-project.org/lppl.txt)
-% Project home page: https://github.com/galaamn/FinalExamZ
+% Project home page: https://github.com/makhgal-ganbold/FinalExamZ
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -88,15 +88,15 @@
   \def\@studentfirstname{Овог}
   \def\@studentlastname{Нэр}
   \def\@studentid{ID}
-  \def\@studentnameonheader{Оюутны овог ба нэр}
+  \def\@studentnameonheader{Оюутны овог болон нэр}
   \def\@studentidonheader{Оюутны ID}
   \def\@attention{Анхаарамж}
-  \def\@time{Шалгалтын нийт хугацаа}
-  \def\@permittedmaterials{Зөвшөөрөгдсөн материал}
+  \def\@time{Шалгалтын хугацаа}
+  \def\@permittedmaterials{Ашиглах материал}
   \def\@goodluck{Амжилт хүсье!}
   \def\@variant{хувилбар}
-  \def\@poweredby{\LaTeX\ ашиглав.}
-  \def\@developer{Галаа}
+  \def\@poweredby{}
+  \def\@developer{Makhgal Ganbold}
   \def\@problem{Бодлого}
   \def\@solution{Бодолт}
   \def\@question{Асуулт}
@@ -136,8 +136,8 @@
   \def\@permittedmaterials{Permitted Materials}
   \def\@goodluck{Good luck!}
   \def\@variant{variant}
-  \def\@poweredby{Powered by \LaTeX.}
-  \def\@developer{Galaa}
+  \def\@poweredby{}
+  \def\@developer{Makhgal Ganbold}
   \def\@problem{Problem}
   \def\@solution{Solution}
   \def\@question{Question}
@@ -160,7 +160,7 @@
   \newcommand{\printsolution}{no}
 \fi
 
-\SetBgContents{\textcolor{black}{\tiny FinalExamZ\ \copyright\ 2015\ifthenelse{\equal{\the\year}{2015}}{}{--\the\year}\ \@developer\ (www.galaa.mn).\ \@poweredby}}
+\SetBgContents{\textcolor{black}{\tiny FinalExamZ\ \copyright\ 2015\ifthenelse{\equal{\the\year}{2015}}{}{--\the\year}\ \@developer\ (www.galaa.met).\ \@poweredby}}
 \SetBgPosition{17.5cm,-20cm}
 \SetBgOpacity{1.0}
 \SetBgAngle{90.0}
@@ -172,7 +172,7 @@
 \ifthenelse{\equal{\printsolution}{yes}}{}{
  \lhead{\@studentnameonheader: $\ldots\ldots\ldots\ldots\ldots\ldots\ldots$} \chead{} \rhead{\@studentidonheader: $\ldots\ldots\ldots\ldots\ldots\ldots\ldots$}
 }
-\lfoot{} \cfoot{\footnotesize{\@page\ $\dfrac{\thepage}{\pageref{finalpage\Alph{variant}}}$ $\ast$ \coursetitle\ \ifthenelse{\equal{\coursecode}{}}{}{(\coursecode)\ }$\ast$ \@variant\ \arabic{variant}}} \rfoot{} 
+\lfoot{} \cfoot{\footnotesize{\@page\ $\dfrac{\thepage}{\pageref{finalpage\Alph{variant}}}$ $\ast$ \coursetitle\ \ifthenelse{\equal{\coursecode}{}}{}{(\coursecode)\ }$\ast$ \@variant\ \arabic{variant}}} \rfoot{}
 
 \renewcommand{\headrulewidth}{0pt} %Do not print a rule below the header
 \renewcommand{\footrulewidth}{0pt}
@@ -303,8 +303,8 @@ $$
 % Problem
 
 \newcommand{\problem}[4][1.5]{
- \paragraph{\textnumero\arabic{number}.} \hspace{-1em} {\small\textit{\@problem}} \addtocounter{number}{1} \hfill {\small\textit{#3 \@score}} \addtocounter{totalpoint}{#3} \\[2mm] 
- #2 
+ \paragraph{\textnumero\arabic{number}.} \hspace{-1em} {\small\textit{\@problem}} \addtocounter{number}{1} \hfill {\small\textit{#3 \@score}} \addtocounter{totalpoint}{#3} \\[2mm]
+ #2
  \vspace{2mm} \par \textit{\@solution}: \par %
  \ifthenelse{\equal{\printsolution}{yes}}{\vspace{0.5em} #4}{\vspace{-1.5em} \ \vspace*{#1cm}}
  \ \newline \textcolor{black!50}{\hrulefill}
@@ -313,8 +313,8 @@ $$
 % Question
 
 \newcommand{\question}[4][0.5]{
- \paragraph{\textnumero\arabic{number}.} \hspace{-1em} {\small\textit{\@question}} \addtocounter{number}{1} \hfill {\small\textit{#3 \@score}} \addtocounter{totalpoint}{#3} \\[2mm] 
- #2 
+ \paragraph{\textnumero\arabic{number}.} \hspace{-1em} {\small\textit{\@question}} \addtocounter{number}{1} \hfill {\small\textit{#3 \@score}} \addtocounter{totalpoint}{#3} \\[2mm]
+ #2
  \vspace{2mm} \par \textit{\@answer}: \par %
  \ifthenelse{\equal{\printsolution}{yes}}{\vspace{0.5em} #4}{\vspace{-1.5em} \ \vspace*{#1cm}}
  \ \newline \textcolor{black!50}{\hrulefill}
@@ -325,8 +325,8 @@ $$
 \newcounter{testchoices}
 
 \newcommand{\stest}[3]{
- \paragraph{\textnumero\arabic{number}.} \hspace{-1em} {\small\textit{\@selectivetest}} \addtocounter{number}{1} \hfill {\small\textit{#2 \@score}} \addtocounter{totalpoint}{#2} \\[2mm] 
- #1 
+ \paragraph{\textnumero\arabic{number}.} \hspace{-1em} {\small\textit{\@selectivetest}} \addtocounter{number}{1} \hfill {\small\textit{#2 \@score}} \addtocounter{totalpoint}{#2} \\[2mm]
+ #1
  \vspace{2mm} \par \textit{\ifthenelse{\equal{\printsolution}{yes}}{\@rightselection}{\@selection}}: \setcounter{testchoices}{1}
  \begin{center}
   \splitlist{#3}
@@ -361,8 +361,8 @@ $$
 % Placement Test
 
 \newcommand{\ptest}[2]{
- \paragraph{\textnumero\arabic{number}.} \hspace{-1em} {\small\textit{\@placementtest}} \addtocounter{number}{1} \hfill {\small\textit{#2 \@score}} \addtocounter{totalpoint}{#2} \\[2mm] 
- #1 
+ \paragraph{\textnumero\arabic{number}.} \hspace{-1em} {\small\textit{\@placementtest}} \addtocounter{number}{1} \hfill {\small\textit{#2 \@score}} \addtocounter{totalpoint}{#2} \\[2mm]
+ #1
  \vspace{0.5em}
  \par\noindent
  \textcolor{black!50}{\hrulefill}

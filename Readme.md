@@ -6,10 +6,10 @@ LaTeX Template & Tool for Exam Preparation
 
 **Author** 
 
-[Galaa](http://galaa.mn/ "Galaa's Personal Page")
+[Makhgal Ganbold](https://galaa.net/)
 
 **Features**
-  - Supported: problem, question, selective test, placement test
+  - Problems, Questions, Selective tests, Placement tests
   - Auto Total Point
   - Print Solution Mode
   - others
